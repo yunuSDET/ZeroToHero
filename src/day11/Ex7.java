@@ -16,14 +16,10 @@ public class Ex7 {
         //* * * * * * * * * *
         //* * * * * * * * * *
 
-        System.out.println(("* ".repeat(10)+"\n").repeat(10));
-
-
-
+        System.out.println(("* ".repeat(10) + "\n").repeat(10));
 
 
     }
-
 
 
 }
