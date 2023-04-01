@@ -1,5 +1,6 @@
 package day12;
 
+
 import java.util.Arrays;
 
 public class Ex1 {
@@ -11,13 +12,14 @@ public class Ex1 {
 
   String[] words = {"hi", "hello", "string", "hello", "if", "hi", "cake", "unique"};
 
-        String result="[";
+        String result="";
+
         for (int i = 0; i < words.length; i++) {
             result+=words[i]+", ";
         }
 
         //System.out.println(Arrays.toString(words));
-        System.out.println(result.substring(0,result.length()-2)+"]");
+        System.out.println("["+result.substring(0,result.length()-2)+"]");
 
 
 
