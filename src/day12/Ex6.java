@@ -12,5 +12,7 @@ public class Ex6 {
         System.out.println(Arrays.toString(arr));
 
 
+
+
     }
 }
