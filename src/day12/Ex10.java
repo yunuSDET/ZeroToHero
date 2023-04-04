@@ -8,6 +8,7 @@ public class Ex10 {
         //*Print all chars except letters whose ascii codes is less then 100
 
 
+
         //First solution
         for (char i = 1; i <100 ; i++) {
 
@@ -15,6 +16,7 @@ public class Ex10 {
                 System.out.print(i);
             }
         }
+
 
 
 
