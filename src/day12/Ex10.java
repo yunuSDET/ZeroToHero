@@ -1,5 +1,8 @@
 package day12;
 
+
+
+
 public class Ex10 {
 
 
