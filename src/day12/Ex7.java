@@ -6,15 +6,15 @@ public class Ex7 {
 
     public static void main(String[] args) {
         String arrivals=
-                        "1.    8.56  " +
-                        "2.    8.58   " +
-                        "3.    8.59   " +
+                        "1.    8.56 " +
+                        "2.    8.58 " +
+                        "3.    8.59 " +
                         "4.    9.00 " +
                         "5.    8.52 " +
                         "6.    8.59 " +
                         "7.    8.42 " +
                         "8.    8.41 " +
-                        "10.   8.58";
+                        "10.   8.58 ";
         //*Given text shows 9 bus numbers and their arrival time.
         // Sort the buses with their arrival times and
         // print  the number of each bus and its arrival time.
@@ -30,7 +30,10 @@ public class Ex7 {
 
             int indexOfDot=arrivals.indexOf(".");
 
+
              numbers[i]=Integer.parseInt(arrivals.substring(indexOfDot-1,indexOfDot));
+
+
 
             arrivals=arrivals.substring(indexOfDot+1);
 
