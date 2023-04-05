@@ -1,5 +1,7 @@
 package day13;
 
+import java.util.Arrays;
+
 public class Ex1 {
 
     public static void main(String[] args) {
@@ -10,28 +12,47 @@ public class Ex1 {
 //Yemek yememek  için uyudu. Output: true
 
 
-        String str1="Kaya bin kere güldü.";
-        String str2="Recep yeni gitti";
-        String str3="Yemek yememek  için uyudu.";
-
-        String vowels="aeıioöuü";
-
-        isSame(str1);
 
 
 
 
+        String s1="Yunus uyur gider.";
+
+        String[]words=s1.toLowerCase().split(" ");
 
 
-
-    }
-
-    private static void isSame(String text) {
-        String[] words=text.split("\\s+");
+        boolean isSame=true;
 
         for (String each : words) {
 
+            each=each.replaceAll("[^aeıioöuü]","");
+
+            char[] eachChars=each.toCharArray();
+
+            Arrays.sort(eachChars);
+
+            String eachSorted=new String(eachChars);
+
+            String firstVowel=eachSorted.substring(0,1);
+
+            String lastVowel=eachSorted.substring(each.length()-1);
+
+            if(!firstVowel.equals(lastVowel)){
+                isSame=false;
+            }
+
         }
+
+
+        System.out.println(isSame);
+
+
+
+
+
+
+
+
 
     }
 }
