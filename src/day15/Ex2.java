@@ -15,6 +15,8 @@ public class Ex2 {
         //First solution
         String date="10/12/98";
 
+
+
         String[] parts=date.trim().split("/");
 
 
@@ -60,8 +62,15 @@ public class Ex2 {
         System.out.println(date+" is valid.");
 
 
+
+
         //Second solution                    // 12/12/96
-    System.out.println(date.matches("([0-9]|[1-2][0-9]|3[0-1])/([0-9]|1[0-2])/([0-9]{2}|[0-9]{4})"));
+
+    System.out.println(date.matches("([0-9]|[0-2][0-9]|3[0-1])/([0-9]|0[1-9]|1[0-2])/([0-9]{2}|[0-9]{4})"));
+
+
+
+
 
     }
 }
