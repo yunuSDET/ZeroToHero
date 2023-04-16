@@ -13,7 +13,9 @@ public class Ex7 {
 
 
         int[] numbers = {3, 35, 62, 12, 43, 65};
+
         Random random = new Random();
+
 
         numbers=Arrays.stream(numbers)
                 .map(i->i+random.nextInt(100)+1)
@@ -25,4 +27,5 @@ public class Ex7 {
 
 
     }
+
 }

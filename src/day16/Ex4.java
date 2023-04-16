@@ -9,6 +9,7 @@ public class Ex4 {
         //*Take a three-digit number (which has different digits) from user and sort its numbers from smallest to largest and reverse sort this result. Finally find the differences of sorted values. And your new number is result you get. Repeat same steps for this number too.
         //After a few repeating you Will reach 495. The question is to find the number of repeations.
 
+
         Scanner input=new Scanner(System.in);
 
 
@@ -28,11 +29,17 @@ public class Ex4 {
             counter++;
 
             char[] digits=String.valueOf(number).toCharArray();
+
             Arrays.sort(digits);
-            int sortedNumber=Integer.parseInt(String.valueOf(digits));
+
+            int sortedNumber=Integer.parseInt(new String(digits));
+
             int reverseSortedNumber=Integer.parseInt((new StringBuilder(String.valueOf(digits))).reverse().toString());
+
             result=Math.abs(sortedNumber-reverseSortedNumber);
-            System.out.println(sortedNumber+"  "+reverseSortedNumber+" ===> "+result);
+
+            System.out.println(reverseSortedNumber+" - "+sortedNumber+" ===> "+result);
+
             number=result;
 
         }
