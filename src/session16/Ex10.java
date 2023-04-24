@@ -10,60 +10,77 @@ public class Ex10 {
 // generate a password by concatenating the reversed username (before the '@' symbol)
 // with the ASCII codes of each character of the email.
 // If the email is not valid, ask for it to be inputted correctly again and again
-        Scanner input=new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
-        String email="";
-        while (true){
+        //First solution
+        String email = "";
+        while (true) {
             System.out.println("Enter a valid email");
-            email=input.nextLine();
-            boolean isValid=true;
+            email = input.nextLine();
+            boolean isValid = true;
 
-            if(email.contains("@") && email.contains(".")){
-                String beforeAt=email.substring(0,email.indexOf("@"));
-                String betweenAtAndDot=email.substring(email.indexOf("@")+1,email.indexOf("."));
-                String afterDot=email.substring(email.indexOf(".")+1);
+            if (email.contains("@") && email.contains(".")) {
+                String beforeAt = email.substring(0, email.indexOf("@"));
+                String betweenAtAndDot = email.substring(email.indexOf("@") + 1, email.indexOf("."));
+                String afterDot = email.substring(email.indexOf(".") + 1);
 
                 for (int i = 0; i < beforeAt.length(); i++) {
-                    char ch=beforeAt.charAt(i);
-                    if(!(Character.isLetterOrDigit(ch) || ch=='_')){
+                    char ch = beforeAt.charAt(i);
+                    if (!(Character.isLetterOrDigit(ch) || ch == '_')) {
 
-                        isValid=false;
+                        isValid = false;
                     }
                 }
 
                 for (int i = 0; i < betweenAtAndDot.length(); i++) {
-                    char ch=betweenAtAndDot.charAt(i);
-                    if(!(Character.isLetterOrDigit(ch) || ch=='_')){
+                    char ch = betweenAtAndDot.charAt(i);
+                    if (!(Character.isLetterOrDigit(ch) || ch == '_')) {
 
-                        isValid=false;
+                        isValid = false;
                     }
                 }
 
                 for (int i = 0; i < afterDot.length(); i++) {
-                    char ch=afterDot.charAt(i);
-                    if(!Character.isLetterOrDigit(ch)){
+                    char ch = afterDot.charAt(i);
+                    if (!Character.isLetterOrDigit(ch)) {
 
-                        isValid=false;
+                        isValid = false;
                     }
                 }
 
-            }else{
+            } else {
 
-                isValid=false;
+                isValid = false;
             }
 
             if (isValid) break;
         }
 
+        System.out.println(generatePassword(email));
 
 
-        String beforeAt=email.substring(0,email.indexOf("@"));
-        String asciiCodes="";
-        for (int i = 0; i < email.length(); i++) {
-            asciiCodes+=(int)email.charAt(i);
+        //Second solution
+        String email2="";
+        while (true) {
+            System.out.println("Enter a valid email");
+            email2 = input.nextLine();
+            if (email2.matches("[A-Za-z0-9_\\.]+@[A-Za-z0-9_\\.]+\\.[A-Za-z0-9]+")) {
+                break;
+            }
         }
-        String password=(new StringBuilder(beforeAt).reverse().toString())+asciiCodes;
-        System.out.println(password);
+        System.out.println(generatePassword(email2));
 
     }
+
+    public static String generatePassword(String string) {
+        String beforeAt = string.substring(0, string.indexOf("@"));
+        String asciiCodes = "";
+        for (int i = 0; i < string.length(); i++) {
+            asciiCodes += (int) string.charAt(i);
+        }
+        String password = (new StringBuilder(beforeAt).reverse().toString()) + asciiCodes;
+        return password;
+    }
+
+    
 }
