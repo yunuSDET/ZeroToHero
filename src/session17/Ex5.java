@@ -26,4 +26,5 @@ public class Ex5 {
         System.out.println(Arrays.toString(words2));
 
     }
+
 }
