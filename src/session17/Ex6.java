@@ -6,15 +6,18 @@ public class Ex6 {
 
 
         Runtime runtime=Runtime.getRuntime();
-
         //Testing  String concatenation and StringBuilder append
 
-        //method1(); //2982440
-        method2();   //2394504
-       long first= runtime.totalMemory()- runtime.freeMemory();
+        long start1=runtime.freeMemory();
+        method1();
+       long first= start1-runtime.freeMemory();
         System.out.println(first);
 
 
+        long start2=runtime.freeMemory();
+        method2();
+        long second=start2- runtime.freeMemory();
+        System.out.println(second);
 
 
     }
