@@ -31,7 +31,7 @@ public class Ex9  {
                 .limit(100)
                 .boxed()
                 .collect(Collectors.toList());
-        System.out.println(numbers);
+        System.out.println(numbers2);
 
 
 
