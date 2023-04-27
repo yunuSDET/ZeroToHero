@@ -37,6 +37,8 @@ public class Ex9  {
 
 
     }
+
+
     public static int sumOfDigits(int number){
         int sum=0;
         for (int i = number; i>0 ; i/=10) {
@@ -44,4 +46,6 @@ public class Ex9  {
         }
         return sum;
     }
+
+
 }
