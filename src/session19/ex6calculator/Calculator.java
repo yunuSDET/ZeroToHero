@@ -19,19 +19,19 @@ public class Calculator {
         this.number2 = number2;
     }
 
-    public int addition(int number1,int number2){
+    public int addition(){
         return number1+number2;
     }
 
-    public int subtraction(int number1,int number2){
+    public int subtraction(){
         return number1-number2;
     }
 
-    public int multiplication(int number1,int number2){
+    public int multiplication(){
         return number1*number2;
     }
 
-    public int division(int number1,int number2){
+    public int division(){
         return number1/number2;
     }
 
@@ -40,10 +40,10 @@ public class Calculator {
         return "Calculator{" +
                 "number1=" + number1 +
                 ", number2=" + number2 +
-                ", addition=" + addition(number1,number2) +
-                ", subtraction=" + subtraction(number1,number2) +
-                ", multiplication=" + multiplication(number1,number2) +
-                ", division=" + division(number1,number2) +
+                ", addition=" + addition() +
+                ", subtraction=" + subtraction() +
+                ", multiplication=" + multiplication() +
+                ", division=" + division() +
                 '}';
     }
 }
