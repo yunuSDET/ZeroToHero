@@ -22,6 +22,5 @@ public class Test {
         class2.addStudent(s5);
 
 
-
     }
 }

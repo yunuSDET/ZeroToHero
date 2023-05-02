@@ -11,6 +11,7 @@ public class Classes {
     public Classes(String className, String teacherName) {
         this.className = className;
         this.teacherName = teacherName;
+        students=new ArrayList<>();
     }
 
 

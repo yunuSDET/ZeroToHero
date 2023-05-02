@@ -31,7 +31,9 @@ public class Student {
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", id=" + id +
-                ", gender=" + gender +
-                '}';
+                ", gender=" + gender ;
+
+
+
     }
 }
