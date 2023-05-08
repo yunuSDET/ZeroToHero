@@ -4,13 +4,13 @@ public class Test {
 
     public static void main(String[] args) {
 
-        Classes class1 = new Classes("2A", new Teacher("yunus", "külcü", 39, 'M', "Ataturk Primary School", 94000));
-        class1.addStudent("ad1", "soyad1", 12, 'F', "Ataturk Primary School", 'A');
-        class1.addStudent("ad2", "soyad2", 9, 'M', "Ataturk Primary School", 'B');
-        class1.addStudent("ad3", "soyad3", 11, 'F', "Ataturk Primary School", 'A');
-        class1.addStudent("ad4", "soyad4", 10, 'M', "Ataturk Primary School", 'C');
-        class1.addStudent("ad5", "soyad5", 8, 'F', "Ataturk Primary School", 'D');
-        class1.addStudent("ad6", "soyad6", 14, 'M', "Ataturk Primary School", 'F');
+        Classes class1 = new Classes("2A", new Teacher("yunus", "kulcu", 39, 'M', "Ataturk Primary School", 94000));
+        class1.addStudent("yunus", "naz", 12, 'F',  'A');
+        class1.addStudent("ayse", "engin", 9, 'M',  'B');
+        class1.addStudent("burak", "pek", 11, 'F',  'A');
+        class1.addStudent("ali", "cavus", 10, 'M', 'C');
+        class1.addStudent("mine", "kadi", 8, 'F',  'D');
+        class1.addStudent("recep", "gul", 14, 'M',  'F');
 
 
         System.out.println("Male students are studying.");
@@ -25,7 +25,7 @@ public class Test {
         class1.getStudents().stream().filter(i->i.getGrade()=='A').forEach(Student::sleep);
 
         System.out.println("Mealtime");
-        if(class1.getTeacher().getGender()=='M'){
+        if(class1.getTeacher().getGender()=='F'){
             class1.getStudents().forEach(Student::eat);
         }else{
             class1.getTeacher().eat();

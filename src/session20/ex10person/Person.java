@@ -7,10 +7,10 @@ public class Person {
 
 
     public Person(String firstName, String lastName, int age, char gender) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.age = age;
-        this.gender = gender;
+        setFirstName(firstName);
+        setFirstName(lastName);
+        setAge(age);
+        setGender(gender);
     }
 
     public String getFirstName() {

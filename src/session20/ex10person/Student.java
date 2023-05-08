@@ -1,28 +1,20 @@
 package session20.ex10person;
 
 public class Student extends Person{
-        private String schoolName;
+
         private char grade;
 
-    public Student(String firstName, String lastName, int age, char gender, String schoolName,char grade) {
+    public Student(String firstName, String lastName, int age, char gender, char grade) {
         super(firstName, lastName, age, gender);
-        this.schoolName = schoolName;
+
 
         this.grade = grade;
     }
 
 
-    public String getSchoolName() {
-        return schoolName;
-    }
 
-    public void setSchoolName(String schoolName) {
-        if(!schoolName.matches("[a-zA-Z]+")) {
-            System.out.println("Invalid school name");
-            return;
-        }
-        this.schoolName = schoolName;
-    }
+
+
 
 
     public char getGrade() {

@@ -15,8 +15,8 @@ public class Classes {
     }
 
 
-    public void addStudent(String firstName, String lastName, int age, char gender, String schoolName,char grade){
-        students.add(new Student(firstName,lastName,age,gender,schoolName,grade));
+    public void addStudent(String firstName, String lastName, int age, char gender,char grade){
+        students.add(new Student(firstName,lastName,age,gender,grade));
 
     }
 
