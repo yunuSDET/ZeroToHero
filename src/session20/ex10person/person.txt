@@ -1,0 +1,26 @@
+*Create a class named Person
+private instance variables:firstName,lastName,age,gender
+Constructors:sets all fields
+Actions: getters and setters(check if firstName and lastName is alphabetic, gender is M or F),eat,speak,sleep
+
+Create a sub class of Person named Student
+private instance variables; schoolName,className,gender,grade
+Constructor: sets all fields
+Actions: getters and setters(check if schoolName or className are alphabetic,grade is from A,B,C,D,E,F), study
+
+Create a sub class of Person named Teacher
+private instance variables schoolName,className,salary
+Constructor:sets all fields
+Actions:getters and setters(check if schoolName or className are alphabetic,salary is bigger than 0),work
+
+Create a class named Classes
+private instance variables:className,teacher(Teacher Object), students arrayList of Student
+Constructor : sets all fields
+Actions getters and setters(check is className is alphabetic),addStudent,removeStudent
+
+Create a class named Test with a main method
+Create a classes object and add 6 student in it.
+Call Male students' study methods
+Call Female students' speak methods
+Call sleep methods for students whose grade is A
+If teacher is female call eat methods for all students otherwise call eat method for only teacher

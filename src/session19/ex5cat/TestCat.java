@@ -5,6 +5,7 @@ import java.util.Arrays;
 
 public class TestCat {
 
+
     public static void main(String[] args) {
 
         Cat cat1=new Cat("Cat1",4,'M');
@@ -13,8 +14,6 @@ public class TestCat {
         Cat cat4=new Cat("Cat4",5,'M');
         Cat cat5=new Cat("Cat5",8,'F');
         Cat cat6=new Cat("Cat6",7,'M');
-
-
 
 
 

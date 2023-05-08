@@ -1,5 +1,6 @@
 package session19.ex5cat;
 
+
 /*Create a class named Cat
  instances:name,age,gender
  a constructor:sets all fields
@@ -9,16 +10,20 @@ package session19.ex5cat;
 
  print the cats which are younger than 5 and male
  */
+
 public class Cat {
     public String name;
     public int age;
     public char gender;
+
 
     public Cat(String name, int age, char gender) {
         this.name = name;
         this.age = age;
         this.gender = gender;
     }
+
+
 
 
    public void eat(){
@@ -41,4 +46,8 @@ public class Cat {
                 ", gender=" + gender +
                 '}';
     }
+
+
+
+
 }
