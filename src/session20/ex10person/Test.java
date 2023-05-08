@@ -25,7 +25,7 @@ public class Test {
         class1.getStudents().stream().filter(i->i.getGrade()=='A').forEach(Student::sleep);
 
         System.out.println("Mealtime");
-        if(class1.getTeacher().getGender()=='F'){
+        if(class1.getTeacher().getGender()=='M'){
             class1.getStudents().forEach(Student::eat);
         }else{
             class1.getTeacher().eat();
