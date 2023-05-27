@@ -1,0 +1,11 @@
+Create a program that models a library catalog.
+
+Create a class named Book with private instance variables for the title, author, and publication year.
+Create a constructor that sets all three fields.
+Create a method named getInfo that returns a string containing the book's title, author, and publication year.
+Create a class named Library with a private instance variable for an ArrayList of Book objects.
+Create a constructor
+Create  methods named addBook and removeBook
+Create a method named searchByAuthor that takes an author name as a parameter and returns an ArrayList of all books by that author.
+Create a method named searchByYear that takes a publication year as a parameter and returns an ArrayList of all books published in that year.
+Create Class named Test with a main method that creates a Library object, adds  at least 5 books and demonstrate how to use its methods to search for books by author and publication year.

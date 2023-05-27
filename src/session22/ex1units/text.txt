@@ -1,0 +1,27 @@
+Abstraction of Units:
+
+Create an abstract class called "Unit" with position and health properties.
+Define an abstract method called "attack()" to represent the attack behavior of a unit.
+Implement a method called "move(int newPosition)" to represent the movement behavior of a unit.
+Creation of Different Unit Types (Inheritance):
+
+Create a class called "Soldier" that extends the "Unit" class.
+
+Add an attackPower property to the "Soldier" class.
+
+Implement the "attack()" method in the "Soldier" class.
+
+Create a class called "Tank" that extends the "Unit" class.
+
+Add a defensePower property to the "Tank" class.
+
+Implement the "attack()" method in the "Tank" class.
+
+Implement a method called "defend()" in the "Tank" class.
+
+
+
+
+Handling Exceptions:
+
+Create an unchecked exception class called "AttackException".

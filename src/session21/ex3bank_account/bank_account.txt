@@ -1,0 +1,12 @@
+Create a program that models a bank account.
+
+Create a class named Account with private instance variables for the account number, account holder name, and balance.
+Create a constructor that sets all three fields.
+Create a method named deposit that takes an amount as a parameter and adds it to the balance.
+Create a method named withdraw that takes an amount as a parameter and subtracts it from the balance.
+Create a method named getBalance that returns the balance.
+Create a class named Bank with a private instance variable for an ArrayList of Account objects.
+Create a constructor
+Create a method named searchByName that takes an account holder name as a parameter and returns the Account object with that name.
+Create a method named searchByBalance that takes a minimum balance as a parameter and returns an ArrayList of all accounts with at least that balance.
+Create a class named Test with a main method which creates a Bank object (with at least 5 account) and demonstrates how to use its methods to search for accounts by name and balance, and deposit and withdraw money from accounts.

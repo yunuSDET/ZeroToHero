@@ -1,0 +1,11 @@
+Create a program that models a simple phone.
+
+Create a class named Phone with private instance variables for the phone's brand, model, and battery level.
+Create getter and setter methods for the phone's brand, model, and battery level.
+Create a constructor that initializes the phone's brand and model to default values and the battery level to 100.
+Create methods for setting and getting the battery level, making a call, and sending a text message.
+Create a subclass of Phone named Smartphone with an additional private instance variable for the operating system.
+Create getter and setter methods for the operating system.
+Create a constructor that initializes the smartphone's brand, model, battery level, and operating system.
+Create methods for taking a photo and accessing the internet.
+Create a main method that demonstrates how to use the Phone and Smartphone classes to make a call, send a text message, take a photo, and access the internet.

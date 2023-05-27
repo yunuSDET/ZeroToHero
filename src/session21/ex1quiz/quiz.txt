@@ -1,0 +1,10 @@
+Write a program that simulates a simple quiz game.
+
+Create a class named Question with a private instance variable for the question text and the answer.
+Create a constructor that sets both fields.
+Create a method named askQuestion that displays the question text and asks the user to enter an answer.
+Create a method named checkAnswer that takes the user's answer as a parameter and returns true if it matches the answer field, false otherwise.
+Create a class named Quiz with a private instance variable for an ArrayList of Question objects.
+Create a constructor
+Create a method named play that loops through each question in the ArrayList, asks the user for an answer, checks if it's correct, and keeps score.
+Create a class named Test with a main method and create a Quiz object, add five questions and call its play method.
