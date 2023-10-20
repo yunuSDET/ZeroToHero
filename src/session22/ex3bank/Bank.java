@@ -5,6 +5,7 @@ import session21.ex6library.Book;
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.*;
+import java.util.function.Consumer;
 
 public class Bank {
     private ArrayList<Account> accounts;
@@ -35,6 +36,7 @@ public class Bank {
         for (Account each : accounts) {
             if (each.getID()==ID) {
                 each.deposit(cash);
+                each.getTransactions().add(cash+" is deposited successfully at "+LocalDate.now());
                 return;
             }
         }
@@ -45,9 +47,39 @@ public class Bank {
         for (Account each : accounts) {
             if (each.getID()==ID) {
                 each.withdraw(cash);
+                each.getTransactions().add(cash+" is withdrawed successfully at "+LocalDate.now());
                 return;
             }
         }
+    }
+
+    public void showIDs(){
+        for (Account each : accounts) {
+            System.out.println("Id is: "+each.getID());
+        }
+    }
+    public void showAccount(){
+
+
+        for (Account each : accounts) {
+            int size=each.getTransactions().size();
+
+            System.out.println("Id is"+each.getID());
+            System.out.println("Total benefit is : "+each.benefit());
+                    if(size>5 ) {
+                        for (int i = size-5; i < size; i++) {
+                            System.out.println(each.getTransactions().get(i));
+                        }
+                    }else{
+                        if(each.getTransactions().size()!=0) System.out.println(each.getTransactions());
+
+                    }
+
+
+        }
+
+
+        
     }
 
     public void Create_S_ID_balance(int ID,double balance){
@@ -90,13 +122,15 @@ public class Bank {
 
         if(accountArrayList.stream().distinct().count()==1){
             accountArrayList.get(0).deposit(10000);
+            System.out.println("Winner account is "+accountArrayList.get(0).getID()+" and new balance is "+accountArrayList.get(0).getBalance());
             return;
         }
 
         Random random=new Random();
         Account account=accountArrayList.get(random.nextInt(accountArrayList.size()));
+        double oldBalance=account.getBalance();
         account.deposit(10000);
-
+        System.out.println("Winner account is "+account.getID()+" old balance is "+oldBalance+ " and new balance is "+account.getBalance());
 
     }
 

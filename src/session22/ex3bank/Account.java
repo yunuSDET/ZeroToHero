@@ -2,6 +2,7 @@ package session22.ex3bank;
 
 import java.time.LocalDate;
 import java.time.Period;
+import java.util.ArrayList;
 
 public abstract class Account {
         private double balance;
@@ -9,13 +10,15 @@ public abstract class Account {
         private int interestRate;
         public static final LocalDate startingDate=LocalDate.of(2020,1,1);
         public static LocalDate currentDate=LocalDate.now();
+        private ArrayList<String> transactions=new ArrayList<>();
 
     public int getInterestRate() {
         return interestRate;
     }
 
-
-
+    public ArrayList<String> getTransactions() {
+        return transactions;
+    }
 
 
 
@@ -27,22 +30,27 @@ public abstract class Account {
         this.interestRate = interestRate;
     }
 
+
     public double getBalance() {
         return balance;
     }
+
 
     public void setBalance(double balance) {
 
         this.balance = balance;
     }
 
+
     public int getID() {
         return ID;
     }
 
+
     public void setID(int ID) {
         this.ID = ID;
     }
+
 
     public Account( int ID,double balance) {
 
@@ -77,8 +85,9 @@ public abstract class Account {
 
     public double benefit() {
         Period period=Period.between(startingDate,currentDate);
-        int days=period.getDays();
-        return getBalance()*getInterestRate()*days/365;
+        int days=period.getDays()+period.getMonths()*30+period.getYears()*365;
+        System.out.println(days);
+        return getBalance()*getInterestRate()*days/(365*100);
     }
 
 

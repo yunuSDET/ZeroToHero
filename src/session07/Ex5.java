@@ -3,7 +3,7 @@ package session07;
 public class Ex5 {
 
     public static void main(String[] args) {
-        //"Write a code that verifies if all the digits of a three-digit number are different."
+        //"Write a code that verifies if all  digits of a three-digit number are different."
 
         int number = 341;
 
